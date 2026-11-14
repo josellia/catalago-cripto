@@ -1,0 +1,20 @@
+<div class="form-container">
+  <h2 class="h3 mb-3">{{title}}</h2>
+  {{#if erros}}<div class="alert alert-danger"><strong>Verifique os campos:</strong>
+    <ul class="mb-0">{{#each erros}}<li>{{this}}</li>{{/each}}</ul>
+  </div>{{/if}}
+  <form method="post" action="{{acao}}" class="card card-body">
+    <div class="mb-3"><label for="titulo" class="form-label">Título da oficina</label><input class="form-control"
+        id="titulo" name="titulo" value="{{oficina.titulo}}" maxlength="120" required></div>
+    <div class="mb-3"><label for="responsavel" class="form-label">Pessoa responsável</label><input class="form-control"
+        id="responsavel" name="responsavel" value="{{oficina.responsavel}}" maxlength="120" required></div>
+    <div class="mb-3"><label for="descricao" class="form-label">Descrição da atividade</label><textarea
+        class="form-control" id="descricao" name="descricao" rows="5" required>{{oficina.descricao}}</textarea></div>
+    <div class="mb-3"><label for="cargaHoraria" class="form-label">Carga horária (horas)</label><input
+        class="form-control" type="number" id="cargaHoraria" name="cargaHoraria" min="1" max="40" step="1"
+        value="{{oficina.cargaHoraria}}" required></div>
+    <div class="d-flex gap-2"><button class="btn btn-primary" type="submit">{{botao}}</button>{{#if oficina.id}}<a
+        class="btn btn-outline-secondary" href="/oficinas/{{oficina.id}}">Cancelar</a>{{else}}<a
+        class="btn btn-outline-secondary" href="/">Cancelar</a>{{/if}}</div>
+  </form>
+</div>

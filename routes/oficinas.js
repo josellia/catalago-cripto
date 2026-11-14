@@ -1,0 +1,10 @@
+const router = require('express').Router();
+const controller = require('../controller/oficinaController');
+router.get('/nova', controller.formNova);
+router.post('/', controller.criar);
+router.get('/:id', controller.detalhes);
+router.get('/:id/editar', controller.formEditar);
+router.post('/:id/editar', controller.atualizar);
+router.post('/:id/alternar', controller.alternar);
+router.post('/:id/excluir', controller.excluir);
+module.exports = router;
