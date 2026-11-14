@@ -9,16 +9,15 @@ Aplicação web fullstack para cadastro e gerenciamento de oficinas de treinamen
 
 ## Como executar
 
-1. Extraia o arquivo ZIP.
-2. Abra a pasta do projeto no VS Code.
-3. No terminal, execute:
+1. Abra a pasta do projeto no VS Code.
+2. No terminal, execute:
 
    ```bash
    npm install
    npm start
    ```
 
-4. Acesse http://localhost:3000.
+3. Acesse http://localhost:3000.
 
 ## Estrutura
 
